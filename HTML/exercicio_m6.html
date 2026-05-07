@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o número</title>
+</head>
+<body>
+    <h1>Adivinhe o número!</h1>
+        <h3>Instruções</h3>
+            <p>Insira no campo abaixo o seu palpite. O programa gera um número aleatório entre 1 e 100 cada vez que a página é carregada. Seu objetivo é acertar o número em até 10 palpites. O programa dirá se o número secreto é maior ou menor que o palpite, use essas dicas como guia!</p>
+            <p>Atenção: se você chegar a 10 tentativas e não adivinhar o número, você perde</p>
+
+    <input type="number" id="palpite" placeholder="Digite seu palpite">
+
+    <button type="button" onclick="chutarPalpite()">Chutar</button>
+
+    <p id="dica"></p>
+    <p id="tentativas"></p>
+    <p id="resultado"></p>
+    <script src="exercicio_m6.js"></script>    
+
+</body>
+</html>
