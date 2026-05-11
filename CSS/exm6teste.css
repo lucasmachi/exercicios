@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* css reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*body fundo roxo, fonte Nunito, layout em coluna centralizado com altura mínima de tela inteira */
+body {
+  background-color: #5e3561;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, #ffffff0d 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%, #00000033 0%, transparent 50%);
+}
+
+/* header ocupa largura total e empilha filhos em coluna centralizada */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* h1 fonte bangers, cor amarela, tamanho fluido com clamp, sombra e animação de entrada */
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(3rem, 10vw, 7rem);
+  color: #d8d027;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  width: 100%;
+  text-shadow:
+    0.25rem 0.25rem 0rem #00000066,
+    0 0 1.875rem #d8d02733;
+  line-height: 1;
+  margin-bottom: 2.25rem;
+  animation: titleDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* animação h1 cai de cima com leve escala */
+@keyframes titleDrop {
+  from { opacity: 0; transform: translateY(-2.5rem) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* bloco de instruções card com fundo semi-transparente, borda sutil, blur e centralização de texto */
+.instrucoes-box {
+  background: #ffffff12;
+  border: 0.125rem solid #ffffff26;
+  border-radius: 1rem;
+  padding: 1.75rem 2.25rem;
+  max-width: 38.75rem;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 0.5rem 2rem #0000004d,
+    inset 0 0.0625rem 0 #ffffff1a;
+  animation: fadeUp 0.6s 0.2s ease both;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* subtítulo das instruções amarelo, maiúsculo e espaçado */
+h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #d8d027;
+  margin-bottom: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+/* parágrafos dentro do bloco de instruções branco suave com uma altura de linha top */
+.instrucoes-box p {
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: #ffffffe0;
+  margin-bottom: 0.625rem;
+}
+
+/* aviso em vermelho claro e negrito */
+.instrucoes-box p:last-child {
+  margin-bottom: 0;
+  color: #de4141;
+  font-weight: 700;
+}
+
+/* main coluna centralizada com espaçamento entre os elementos */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+/* animação elementos sobem suavemente do fundo */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* input formato pill com borda amarelada e fundo translúcido */
+#palpite {
+  width: 16.25rem;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background: #ffffff1a;
+  border: 0.125rem solid #d8d02780;
+  border-radius: 3.125rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 0 0 0 #d8d02700;
+}
+
+/* placeholder do input branco apagado */
+#palpite::placeholder {
+  color: #ffffff73;
+  font-weight: 600;
+}
+
+/* input focus borda amarela, fundo mais claro e brilho externo */
+#palpite:focus {
+  border-color: #d8d027;
+  background: #ffffff29;
+  box-shadow: 0 0 0 0.25rem #d8d02733, 0 0.25rem 1.25rem #00000033;
+}
+
+/* remover setas padrão do input */
+#palpite::-webkit-inner-spin-button,
+#palpite::-webkit-outer-spin-button { -webkit-appearance: none; }
+#palpite[type=number] { -moz-appearance: textfield; }
+
+/* botão verde com sombra inferior eefeitos de hover e clique */
+button {
+  padding: 0.875rem 3rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.09375rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #1aab2b;
+  border: none;
+  border-radius: 3.125rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0.375rem 0 #0e7a1c,
+    0 0.5rem 1.25rem #1aab2b59;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+/* brilho interno superior do botao via pseudo-elemento */
+button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #ffffff2e 0%, transparent 60%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* botao hover sobe levemente */
+button:hover {
+  transform: translateY(-0.125rem);
+  box-shadow:
+    0 0.5rem 0 #0e7a1c,
+    0 0.75rem 1.75rem #1aab2b73;
+}
+
+/* botao active desce simulando pressão */
+button:active {
+  transform: translateY(0.1875rem);
+  box-shadow:
+    0 0.125rem 0 #0e7a1c,
+    0 0.25rem 0.625rem #1aab2b33;
+}
+
+/* efeito ripple botao: circulo branco que expande ao clicar no botão */
+button .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff59;
+  transform: scale(0);
+  animation: ripple 0.5s linear;
+  pointer-events: none;
+}
+
+/* animação do ripple expande e some */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* contador texto grande e em negrito */
+#tentativas {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.0625rem;
+  text-align: center;
+  min-height: 2.2rem;
+}
+
+/* dica amarelo destacado */
+#dica {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d8d027;
+  text-align: center;
+  min-height: 1.5rem;
+}
+
+/* resultado inicialmente sem aparência, ganha estilo ao receber conteúdo */
+#resultado {
+  margin-top: 0.625rem;
+  padding: 1.125rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 0.875rem;
+  min-height: 3.75rem;
+  letter-spacing: 0.0625rem;
+  transition: all 0.4s ease;
+}
+
+/* resultado com conteudo fundo translucido, borda e animação de entrada */
+#resultado:not(:empty) {
+  background: #ffffff1f;
+  border: 0.125rem solid #ffffff40;
+  box-shadow: 0 0.25rem 1.5rem #00000033;
+  animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* animação do resultado expande a partir do centro */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* resultado ganhou fundo e borda verdes com brilho */
+#resultado.ganhou {
+  background: #1aab2b40;
+  border-color: #1aab2b;
+  color: #a8ffb2;
+  box-shadow: 0 0 1.875rem #1aab2b4d;
+}
+
+/* resultado perdeu fundo e borda vermelhos com brilho */
+#resultado.perdeu {
+  background: #dc323233;
+  border-color: #dc323280;
+  color: #ffaaaa;
+  box-shadow: 0 0 1.875rem #dc323233;
+}
