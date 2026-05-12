@@ -1,0 +1,149 @@
+/*CSS RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BODY*/
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #0c0c0c;
+}
+
+/*HEADER*/
+
+header {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Agu Display';
+    color: #b29a4a;
+}
+
+header p{
+    font-size: 1.25rem;
+    font-family: sans-serif;
+}
+
+/*NAV*/
+
+nav {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.30rem;
+    background: #0c0c0c;
+    border-radius: 0.5rem;
+    display: block;
+    width: 12.5rem;
+    margin: 0 auto;
+}
+/*pra criar uma estrutura de bloco para o menu de navegação
+usei display block pro nav a cada link ocupar uma linha inteira
+no entanto ele respeita o width (largura) definida*/
+/*pra centralizar esse bloco criado usamos margin: 0 auto
+que centraliza horizontalmente qualquer bloco
+de largura definida*/
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+/*essa parte tira as bolinhas de itens de lista não ordenada*/
+
+nav a:hover {
+    color: #867439;
+}
+
+/*SECTION*/
+
+section {
+    padding: 1.25rem;
+    margin: 0.625rem auto;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    color: #ffffff;
+    background: #0c0c0c;
+}
+/*box-shadow coloca sombra. primeiro valor é o deslocamento horizontal da sombra, então
+0 significa que não desloca nem pra esq nem pra dir
+segundo valor deslocamento vertical, então significa q vai 0.625(4px) pra baixo
+terceiro valor é o blur
+quarto valor cor em rgba que permite controle de opacidade*/
+
+section h2 {
+    color: #b29a4a;
+}
+
+section ul {
+    list-style: none;
+}
+
+/*ARTICLE*/
+article p{
+    padding: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+article h3 {
+    padding: 0.5rem;
+    margin-top: 3rem;
+}
+
+/*BUTTON*/
+
+.botaoprojetos {
+    padding: 0.8rem;
+    font-family: Arial;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #b29a4a;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.botaoprojetos:hover {
+    background: #867439;
+    font-weight: bold;
+}
+
+.botaocontato {
+    padding: 0.8rem;
+    color: #b29a4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botaocontato:hover {
+    color:#867439
+}
+
+.botaoemail {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.botaoemail:hover {
+    color: #867439;
+}
+/*FOOTER*/
+
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #0a0a0a;
+}
