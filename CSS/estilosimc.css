@@ -1,0 +1,54 @@
+/*CSS RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica;
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #253556;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#destaqueparagrafo:hover {
+    font-weight: bold;
+    color: #435d90;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #253556;
+    font-weight: bold;
+}
+
+#classificacao {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+label {
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #435d90;
+    color: #ffffff;
+}
