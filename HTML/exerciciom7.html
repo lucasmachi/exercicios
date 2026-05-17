@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="exerciciom7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parquímetro virtual</h1>
+        <h2>R$: 1,00 - 30 minutos</h2>
+        <h2>R$: 1,75 - 60 minutos</h2>
+        <h2>R$: 3,00 - 120 minutos</h2>
+
+
+        <input type="number" id="valorpago" placeholder="Insira o valor">
+        <button onclick="parquimetro.calcularPrincipal()">Pagar</button>
+
+        <p id="troco"></p>
+        <p id="tempo"></p>
+    </div>
+    <script src="exerciciom7.js"></script>
+</body>
+</html>
